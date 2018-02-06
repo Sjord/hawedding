@@ -1,0 +1,27 @@
+
+html, body {
+    height: 100%;
+}
+body {
+    background-image: url('wedding_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+}
+
+#content {
+    background: rgba(255, 255, 255, 0.8);
+    min-height: 50%;
+    max-width: 40em;
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+}
