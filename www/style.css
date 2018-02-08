@@ -3,7 +3,7 @@ html, body {
     height: 100%;
 }
 body {
-    background-image: url('wedding_background.jpg');
+    background-image: url("wedding_promo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; center;
@@ -24,4 +24,15 @@ body {
 
 h1 {
     text-align: center;
+}
+iframe.captcha {
+    width: 305px;
+    height: 80px;
+    border: none;
+}
+div.input {
+    margin: 1em;
+}
+.input > label:first-child {
+    display: block;
 }
