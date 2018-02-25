@@ -1,16 +1,8 @@
-
-html, body {
-    height: 100%;
-}
 body {
     background-image: url("wedding_promo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     font-family: sans-serif;
 }
@@ -20,6 +12,7 @@ body {
     min-height: 50%;
     max-width: 40em;
     padding: 1em;
+    margin: 5em auto;
 }
 
 h1 {
