@@ -9,4 +9,10 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <a href="./">home</a>
+            <a href="./aanmelden.php">aanmelden</a>
+        </nav>
+    </header>
     <div id="content">
