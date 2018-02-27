@@ -1,5 +1,8 @@
+html {
+    min-height: 100%;
+}
 body {
-    background-image: url("wedding_promo.jpg");
+    background-image: url("wedding_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; center;

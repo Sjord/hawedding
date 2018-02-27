@@ -11,19 +11,9 @@
             header("Location: error.html");
         }
     }
+
+    require("../lib/header.php");
 ?>
-<!doctype html>
-
-<html lang="nl">
-<head>
-    <meta charset="utf-8">
-    <meta property="og:image" content="wedding_promo.jpg">
-    <title>Humphrey en Angelica gaan trouwen - aanmelden</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div id="content">
         <form method="POST">
         <h1>Aanmelden voor de bruiloft</h1>
         <p>
@@ -83,6 +73,6 @@ Bruidschat aanbetaling 30
         </p>
         <input type="submit" value="Aanmelden">
         </form>
-    </div>
-</body>
-</html>
+<?php
+    require("../lib/footer.php");
+?>
