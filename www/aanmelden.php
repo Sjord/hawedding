@@ -1,9 +1,9 @@
 <?php
+    require_once("../lib/config.php");
     $error = false;
-    $settings = ["email" => ""]; // TODO move to settings
     if (!empty($_POST)) {
-        $fres = file_put_contents("../data/".uniqid().".json", json_encode($_POST));
-        $mres = mail($settings["email"], "Inschrijving voor bruiloft", json_encode($_POST));
+        $fres = file_put_contents($config["outdir"].uniqid().".json", json_encode($_POST));
+        $mres = mail($config["email"], "Inschrijving voor bruiloft", json_encode($_POST));
 
         if ($fres || $mres) {
             header("Location: bedankt.html");
