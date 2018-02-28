@@ -1,18 +1,14 @@
-
-html, body {
-    height: 100%;
+html {
+    min-height: 100%;
 }
 body {
-    background-image: url('wedding_background.jpg');
+    background-image: url("wedding_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; center;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     font-family: sans-serif;
+    margin: 0;
 }
 
 #content {
@@ -20,8 +16,33 @@ body {
     min-height: 50%;
     max-width: 40em;
     padding: 1em;
+    margin: 5em auto;
 }
 
 h1 {
     text-align: center;
+}
+iframe.captcha {
+    width: 305px;
+    height: 80px;
+    border: none;
+}
+div.input {
+    margin: 1em;
+}
+.input > label:first-child {
+    display: block;
+}
+header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1em;
+    text-align: center;
+}
+nav > a {
+    padding: 1em;
+    background: rgb(233, 241, 196);
+    text-decoration: none;
+}
+nav > a:hover {
+    background: rgb(213, 231, 119);
 }
