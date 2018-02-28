@@ -6,9 +6,9 @@
         $mres = mail($config["email"], "Inschrijving voor bruiloft", json_encode($_POST));
 
         if ($fres || $mres) {
-            header("Location: bedankt.html");
+            header("Location: bedankt.php");
         } else {
-            header("Location: error.html");
+            header("Location: error.php");
         }
     }
 
