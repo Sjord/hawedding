@@ -39,4 +39,10 @@ header {
     text-align: center;
 }
 nav > a {
+    padding: 1em;
+    background: rgb(233, 241, 196);
+    text-decoration: none;
+}
+nav > a:hover {
+    background: rgb(213, 231, 119);
 }

@@ -67,10 +67,6 @@
                 <label for="karaoke">Heb je een verzoeknummer voor de karaoke-avond?</label>
                 <input type="text" name="karaoke" placeholder="naam van artiest en nummer" id="karaoke">
             </div>
-        <p>
-            Cadeautip: ✉️
-Bruidschat aanbetaling 30
-        </p>
         <input type="submit" value="Aanmelden">
         </form>
 <?php
