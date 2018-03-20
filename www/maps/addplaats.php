@@ -11,6 +11,10 @@ function get_cities() {
     return json_decode(file_get_contents("../../data/cities.json"), true);
 }
 
+function get_target() {
+    return json_decode(file_get_contents("../../data/target.json"), true);
+}
+
 function get_bearing($from, $to) {
     $rad = atan2($to['x'] - $from['x'], $from['y'] - $to['y']);
     return fmod(360.0 + (180 * $rad / pi()), 360.0);
@@ -30,6 +34,54 @@ if (!empty($_POST['cityname'])) {
     $cities[$cityname] = ["x" => $_POST["map_x"], "y" => $_POST["map_y"]];
     file_put_contents("../../data/cities.json", json_encode($cities));
 }
+
+function add_points($a, $b) {
+    return ["x" => $a["x"] + $b["x"], "y" => $a["y"] + $b["y"]];
+}
+
+function angle_sub($a, $b) {
+    return fmod($b - $a + 180 + 360, 360) - 180;
+}
+
+function get_closest_bearings($target, $bearings) {
+    $left = -360;
+    $right = 360;
+    foreach ($bearings as $bearing) {
+        $diff = angle_sub($target, $bearing);
+        if ($diff > $left && $diff < 0) {
+            $left = $diff;
+        }
+        if ($diff < $right && $diff > 0) {
+            $right = $diff;
+        }
+    }
+    return [$target + $left, $target + $right];
+}
+
+function get_widest_bearings($target, $bearings) {
+    return get_closest_bearings($target + 180, $bearings);
+}
+
+function hint() {
+    global $cities;
+    $key = array_rand($cities);
+    $from = $cities[$key];
+
+    $target = get_target();
+    $center = $target["target"];
+    $target_bearing = get_bearing($from, $center);
+
+    $bearings = [];
+    foreach ($target['polygon'] as $offset) {
+        $corner = add_points($center, $offset);
+        $bearings[] = get_bearing($from, $corner);
+    }
+    list($left, $right) = get_widest_bearings($target_bearing, $bearings);
+
+    return [$from, $left, $right];
+}
+
+print_r($point);
 ?>
 <form method="POST">
 <input type="text" name="cityname">
@@ -39,8 +91,21 @@ if (!empty($_POST['cityname'])) {
       viewBox="0 0 1920 1090" preserveAspectRatio="xMidYMid slice"
       style="width:1920px; height:1090px; overflow: visible; position:absolute; top:0; left:0; z-index: 1; pointer-events: none;">
       <?php 
-          $bearing = get_bearing($norwich, $point);
-          echo svg_path($cities['Norwich'], $bearing); 
+        list($from, $low, $high) = hint();
+        echo svg_path($from, $low); 
+        echo svg_path($from, $high); 
+
+        $target = get_target();
+        $center = $target["target"];
+
+        $prev_corner = null;
+        foreach ($target['polygon'] as $offset) {
+            $corner = add_points($center, $offset);
+            if ($prev_corner) {
+                echo svg_path($prev_corner, $corner);
+            }
+            $prev_corner = $corner;
+        }
       ?>
     </svg>
 </div>
