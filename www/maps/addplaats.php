@@ -1,5 +1,9 @@
 <?php
 function svg_path($from, $to) {
+    if (!is_array($to)) {
+        $len = 1000;
+        $to = ["x" => $from["x"] + $len * sin(deg2rad($to)), "y" => $from["y"] + $len * -cos(deg2rad($to))];
+    }
     return sprintf('<path style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M %d,%d %d,%d" />', $from['x'], $from['y'], $to['x'], $to['y']);
 }
 
@@ -34,10 +38,10 @@ if (!empty($_POST['cityname'])) {
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
       viewBox="0 0 1920 1090" preserveAspectRatio="xMidYMid slice"
       style="width:1920px; height:1090px; overflow: visible; position:absolute; top:0; left:0; z-index: 1; pointer-events: none;">
-      <?php echo svg_path($cities['Norwich'], $point); ?>
+      <?php 
+          $bearing = get_bearing($norwich, $point);
+          echo svg_path($cities['Norwich'], $bearing); 
+      ?>
     </svg>
 </div>
 </form>
-<?php
-
-?>
