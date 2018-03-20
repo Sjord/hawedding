@@ -1,8 +1,8 @@
-<form method="POST">
-<input type="text" name="cityname">
-<input type="image" src="map.png" name="map">
-</form>
 <?php
+function svg_path($from, $to) {
+    return sprintf('<path style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M %d,%d %d,%d" />', $from['x'], $from['y'], $to['x'], $to['y']);
+}
+
 function get_cities() {
     return json_decode(file_get_contents("../../data/cities.json"), true);
 }
@@ -20,11 +20,24 @@ if (!empty($_POST)) {
     echo get_bearing($norwich, $point);
 }
 
-
 if (!empty($_POST['cityname'])) {
     $cities = get_cities();
     $cityname = $_POST['cityname'];
     $cities[$cityname] = ["x" => $_POST["map_x"], "y" => $_POST["map_y"]];
     file_put_contents("../../data/cities.json", json_encode($cities));
 }
+?>
+<form method="POST">
+<input type="text" name="cityname">
+<div style="position: relative">
+    <input type="image" src="map.png" name="map">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+      viewBox="0 0 1920 1090" preserveAspectRatio="xMidYMid slice"
+      style="width:1920px; height:1090px; overflow: visible; position:absolute; top:0; left:0; z-index: 1; pointer-events: none;">
+      <?php echo svg_path($cities['Norwich'], $point); ?>
+    </svg>
+</div>
+</form>
+<?php
+
 ?>
