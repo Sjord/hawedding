@@ -78,10 +78,12 @@ function hint() {
     }
     list($left, $right) = get_widest_bearings($target_bearing, $bearings);
 
-    return [$from, $left, $right];
+    return [$key, $from, ceil(fmod($left, 360)), floor(fmod($right, 360))];
 }
 
 print_r($point);
+list($city, $from, $low, $high) = hint();
+echo "Tussen $high en $low graden vanaf $city";
 ?>
 <form method="POST">
 <input type="text" name="cityname">
@@ -91,7 +93,6 @@ print_r($point);
       viewBox="0 0 1920 1090" preserveAspectRatio="xMidYMid slice"
       style="width:1920px; height:1090px; overflow: visible; position:absolute; top:0; left:0; z-index: 1; pointer-events: none;">
       <?php 
-        list($from, $low, $high) = hint();
         echo svg_path($from, $low); 
         echo svg_path($from, $high); 
 
