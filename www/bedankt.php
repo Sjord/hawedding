@@ -8,6 +8,7 @@ Je kan je betaling overmaken op rekening NL42ABNA0626782279 t.n.v. Sjoerd Langke
 </p>
 <p>
 Deze informatie en meer staat ook op de <a href="./info.php">informatie pagina</a>.
+</p>
 <?php
 require("../lib/footer.php");
 ?>
