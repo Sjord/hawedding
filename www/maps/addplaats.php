@@ -37,6 +37,14 @@ class Target {
         }
         return false;
     }
+
+    function scale($factor) {
+        $scaled = [];
+        foreach ($this->polygon as $offset) {
+            $scaled[] = ["x" => $offset["x"] * $factor, "y" => $offset["y"] * $factor];
+        }
+        return new Target(["target" => $this->center, "polygon" => $scaled]);
+    }
 }
 
 function get_distance($point_a, $point_b) {
@@ -106,9 +114,8 @@ function get_widest_bearings($target, $bearings) {
     return get_closest_bearings($target + 180, $bearings);
 }
 
-function hint() {
+function hint($target) {
     global $cities;
-    $target = get_target();
 
     do {
         $key = array_rand($cities);
@@ -120,12 +127,20 @@ function hint() {
     return [$key, $from, ceil(fmod($left, 360)), floor(fmod($right, 360))];
 }
 
+$target = get_target();
+if (isset($_POST["factor"])) {
+    $target = $target->scale($_POST["factor"]);
+}
+
 print_r($point);
-list($city, $from, $low, $high) = hint();
+list($city, $from, $low, $high) = hint($target);
 echo "Tussen $high en $low graden vanaf $city";
 ?>
 <form method="POST">
-<input type="text" name="cityname">
+<input type="submit" name="factor" value="1.0">
+<input type="submit" name="factor" value="0.5">
+<input type="submit" name="factor" value="0.1">
+<!-- <input type="text" name="cityname"> -->
 <div style="position: relative">
     <input type="image" src="map.png" name="map">
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -135,7 +150,6 @@ echo "Tussen $high en $low graden vanaf $city";
         echo svg_path($from, $low); 
         echo svg_path($from, $high); 
 
-        $target = get_target();
 
         $prev_corner = null;
         foreach ($target->get_corners() as $corner) {
