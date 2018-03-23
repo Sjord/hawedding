@@ -27,6 +27,20 @@ class Target {
         $bearings = $this->get_bearings_to_corners($from);
         return get_widest_bearings($center_bearing, $bearings);
     }
+
+    function is_close($point) {
+        $distance = get_distance($point, $this->center);
+        foreach ($this->get_corners() as $corner) {
+            if (get_distance($this->center, $corner) >= $distance) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+function get_distance($point_a, $point_b) {
+    return sqrt(($point_b['x'] - $point_a['x']) ** 2 + ($point_b["y"] - $point_a["y"]) ** 2);
 }
 
 function svg_path($from, $to) {
@@ -94,10 +108,13 @@ function get_widest_bearings($target, $bearings) {
 
 function hint() {
     global $cities;
-    $key = array_rand($cities);
-    $from = $cities[$key];
-
     $target = get_target();
+
+    do {
+        $key = array_rand($cities);
+        $from = $cities[$key];
+    } while ($target->is_close($from));
+
     list($left, $right) = $target->get_bearings_around_polygon($from);
 
     return [$key, $from, ceil(fmod($left, 360)), floor(fmod($right, 360))];
