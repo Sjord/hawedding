@@ -1,4 +1,34 @@
 <?php
+
+class Target {
+    function __construct($data) {
+        $this->center = $data["target"];
+        $this->polygon = $data["polygon"];
+    }
+
+    function get_corners() {
+        $corners = [];
+        foreach ($this->polygon as $offset) {
+            $corners[] = add_points($this->center, $offset);
+        }
+        return $corners;
+    }
+
+    function get_bearings_to_corners($from) {
+        $bearings = [];
+        foreach ($this->get_corners() as $corner) {
+            $bearings[] = get_bearing($from, $corner);
+        }
+        return $bearings;
+    }
+
+    function get_bearings_around_polygon($from) {
+        $center_bearing = get_bearing($from, $this->center);
+        $bearings = $this->get_bearings_to_corners($from);
+        return get_widest_bearings($center_bearing, $bearings);
+    }
+}
+
 function svg_path($from, $to) {
     if (!is_array($to)) {
         $len = 1000;
@@ -12,7 +42,7 @@ function get_cities() {
 }
 
 function get_target() {
-    return json_decode(file_get_contents("../../data/target.json"), true);
+    return new Target(json_decode(file_get_contents("../../data/target.json"), true));
 }
 
 function get_bearing($from, $to) {
@@ -68,15 +98,7 @@ function hint() {
     $from = $cities[$key];
 
     $target = get_target();
-    $center = $target["target"];
-    $target_bearing = get_bearing($from, $center);
-
-    $bearings = [];
-    foreach ($target['polygon'] as $offset) {
-        $corner = add_points($center, $offset);
-        $bearings[] = get_bearing($from, $corner);
-    }
-    list($left, $right) = get_widest_bearings($target_bearing, $bearings);
+    list($left, $right) = $target->get_bearings_around_polygon($from);
 
     return [$key, $from, ceil(fmod($left, 360)), floor(fmod($right, 360))];
 }
@@ -97,11 +119,9 @@ echo "Tussen $high en $low graden vanaf $city";
         echo svg_path($from, $high); 
 
         $target = get_target();
-        $center = $target["target"];
 
         $prev_corner = null;
-        foreach ($target['polygon'] as $offset) {
-            $corner = add_points($center, $offset);
+        foreach ($target->get_corners() as $corner) {
             if ($prev_corner) {
                 echo svg_path($prev_corner, $corner);
             }
