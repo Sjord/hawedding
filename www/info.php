@@ -15,7 +15,7 @@ Als je vanaf een andere plaats dan Haarlem wilt vertrekken, dat kan!, geef dit d
 </div>
 <div>We zullen met de auto vertrekken in de richting van de trouwlocatie, welke wij natuurlijk zo lang mogelijk geheim zullen houden. Benzinekosten zitten in het weekendgeld.</div>
 <div>We streven ernaar om tussen 22:00/23:00 te arriveren op locatie.</div>
-
+<p>De routebeschrijving is een beetje ingewikkeld, dus neem je kaarthoekmeter of geodriehoek mee, en laadt je telefoon op.</p>
 <div>
 <h3>Locatie</h3>
 </div>
@@ -49,7 +49,7 @@ Als je vanaf een andere plaats dan Haarlem wilt vertrekken, dat kan!, geef dit d
 </ul>
 </div>
 <p>
-Je kan je betaling overmaken op rekening NL42ABNA0626782279 t.n.v. Sjoerd Langkemper.
+Je kan je betaling overmaken op rekening NL42ABNA0626782279 t.n.v. Sjoerd Langkemper. Als je mee gaat vragen we om een eerste aanbetaling van €30.
 </p>
 
 <div>
