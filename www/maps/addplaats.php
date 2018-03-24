@@ -150,13 +150,8 @@ echo "Tussen $high en $low graden vanaf $city";
         echo svg_path($from, $low); 
         echo svg_path($from, $high); 
 
-
-        $prev_corner = null;
         foreach ($target->get_corners() as $corner) {
-            if ($prev_corner) {
-                echo svg_path($prev_corner, $corner);
-            }
-            $prev_corner = $corner;
+            echo svg_path($target->center, $corner);
         }
       ?>
     </svg>
