@@ -3,25 +3,31 @@ require("../lib/header.php");
 ?>
 
 <h3>Vertrek</h3>
-<div>Het weekend zal starten tussen 17:00 en 19:00, Er zal in teams gestart worden, aanvankelijk van de tijd dat je beschikbaar bent, aan het weekend.</div>
-<div>
-<ul>
-<li>- 17:00 tot 18:00, mogelijkheid om op scouting te eten.</li>
-<li>- 18:00 / 19:00, start aan het weekend</li>
-</ul>
-Als je vanaf een andere plaats dan Haarlem wilt vertrekken, dat kan!, geef dit dan even aan bij uw aanmelding.</div>
-<div>
-<br>
-</div>
-<div>We zullen met de auto vertrekken in de richting van de trouwlocatie, welke wij natuurlijk zo lang mogelijk geheim zullen houden. Benzinekosten zitten in het weekendgeld.</div>
+<p>
+Op vrijdagavond is er tussen 17:00 en 18:00 uur de mogelijkheid om op scouting te eten. Daarna starten we per team aan het weekend. Als je later bent is dat geen probleem, dan vertrek je met een later team. Vertrek je niet vanuit Haarlem, dan krijg je instructies hoe je op de locatie komt.
 <div>We streven ernaar om tussen 22:00/23:00 te arriveren op locatie.</div>
 <p>De routebeschrijving is een beetje ingewikkeld, dus neem je kaarthoekmeter of geodriehoek mee, en laadt je telefoon op.</p>
 <div>
+
+<h3>Paklijst</h3>
+<p>Je kan overwegen om de volgende dingen mee te nemen:</p>
+<ul>
+<li>Matje</li>
+<li>Slaapzak</li>
+<li>Zwemspul</li>
+<li>Corsage</li>
+<li>Bruidschat</li>
+<li>Kaarthoekmeter</li>
+<li>Lineaal</li>
+<li>Powerbank</li>
+<li>Paspoort of ID</li>
+<li>Zonnebrandcreme</li>
+</ul>
+
 <h3>Locatie</h3>
 </div>
 <div>
 <ul>
-<li>Neem je paspoort of identiteitskaart mee!</li>
 <li>Er zijn geen bedden, dus neem slaap toebehoren mee,</li>
 <li>Helaas zijn er geen douches aanwezig,</li>
 <li>Op locatie dienen wij vanaf 23:00 uur stil te zijn, je kunt de afstand tussen gebouw en buren vergelijken met de KK en buren Verspronckweg. Door slechte ervaringen in het verleden, zijn zij hier wat strenger op.</li>
