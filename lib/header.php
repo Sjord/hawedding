@@ -14,7 +14,6 @@
         <nav>
             <a href="./">home</a>
             <a href="./info.php">info</a>
-            <a href="./aanmelden.php">aanmelden</a>
         </nav>
     </header>
     <div id="content">
