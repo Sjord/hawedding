@@ -46,3 +46,16 @@ nav > a {
 nav > a:hover {
     background: rgb(213, 231, 119);
 }
+.question {
+    margin: 1em 0;
+    padding: 5px;
+    border: solid black 1px;
+}
+.question.answered {
+    background-color: #fee;
+    border: solid #900 1px;
+}
+.question.answered.correct {
+    background-color: #efe;
+    border: solid #090 1px;
+}

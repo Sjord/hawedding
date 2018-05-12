@@ -38,15 +38,12 @@ class Model_Question extends RedBean_SimpleModel {
         foreach ($answers as $answer) {
             echo '<div class="answer"><input type="'.$type.'" name="answer_hash[]" value="'.$answer->hash.'" id="'.$answer->hash.'"><label for="'.$answer->hash.'">'.$answer->text.'</label></div>';
         }
-        echo '<input type="submit">';
+        echo '<input type="submit" value="Verstuur">';
         echo '</form>';
     }
 
     function output_answer() {
-        $answers = $this->bean->xownAnswerList;
-        echo '<div class="question answered">';
         echo $this->text;
-        echo '</div>';
     }
 }
 

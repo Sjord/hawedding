@@ -11,7 +11,7 @@ $bruiloftnaam = $_COOKIE['bruiloftnaam'];
 $teamnaam = $_COOKIE['team'];
 
 $team = R::findOne("team", "naam=?", [$teamnaam]);
-if ($_POST['volgenderonde'] && mag_naar_volgende_ronde($ronde, $team)) {
+if ($_POST['volgenderonde'] && mag_naar_volgende_ronde($team->ronde, $team)) {
     $team->ronde += 1;
     R::store($team);
 }
@@ -130,6 +130,7 @@ if (!mag_naar_volgende_ronde($ronde, $team)) {
     $disabled = ' disabled="disabled" ';
 }
 
+if ($ronde <= 5) {
 ?>
 <div class="rondeknop">
 <form method="POST"><input type="submit" name="volgenderonde" value="Naar volgende ronde" <?php echo $disabled; ?>>
@@ -144,5 +145,6 @@ if (!ronde_tijd_is_om($ronde)) {
 </form>
 </div>
 <?php
+}
 
 include("../lib/footer.php");
