@@ -59,3 +59,6 @@ nav > a:hover {
     background-color: #efe;
     border: solid #090 1px;
 }
+input {
+    margin: 6px;
+}
