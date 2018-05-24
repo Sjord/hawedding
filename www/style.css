@@ -52,12 +52,16 @@ nav > a:hover {
     border: solid black 1px;
 }
 .question.answered {
-    background-color: #fee;
     border: solid #900 1px;
 }
 .question.answered.correct {
-    background-color: #efe;
     border: solid #090 1px;
+}
+.answered {
+    background-color: #fee;
+}
+.answered.correct {
+    background-color: #efe;
 }
 input {
     margin: 6px;
