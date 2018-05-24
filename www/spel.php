@@ -23,6 +23,7 @@ include("../lib/header.php");
     Ingelogged als <?= htmlentities("$bruiloftnaam ($echtenaam) van $teamnaam") ?>
     <h1>Ronde <?php echo $ronde; ?></h1>
 </header>
+<form method="GET"><input type="submit" value="Ververs pagina"><input type="hidden" name="q" value="<?php echo uniqid(); ?>"></form>
 <div class="intro">
     <?php
         include("../lib/ronde$ronde.php");
