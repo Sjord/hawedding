@@ -10,9 +10,9 @@ foreach ($lines as $line) {
         $i = 0;
         continue;
     }
-    if (preg_match("~(Ten.*) \((.*)\)~", $line, $matches)) {
+    else if (preg_match("~^([A-Z].*?)( \((.*)\))?$~", $line, $matches)) {
         $text = $matches[1];
-        $quality = $matches[2];
+        $quality = $matches[3];
         $hint = R::dispense("hint");
         $hint->ronde = $ronde;
         $hint->correct = $correct;
@@ -21,5 +21,7 @@ foreach ($lines as $line) {
         $hint->index = $i;
         $i++;
         R::store($hint);
+    } else if (!empty($line)) {
+        echo "Failed to parse: $line\n";
     }
 }
