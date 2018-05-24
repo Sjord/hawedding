@@ -3,7 +3,7 @@ require("../lib/db.php");
 
 $teams = R::find("team");
 $questions = R::find("question");
-$rondes = [1, 2, 3, 4, 5];
+$rondes = [1, 2, 3, 4, 5, 6];
 
 $offset = 1;
 foreach ($teams as $team) {
@@ -22,5 +22,5 @@ foreach ($teams as $team) {
             R::store($koppel);
         }
     }
-    $offset += 2;
+    $offset += 1;
 }
