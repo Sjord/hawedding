@@ -131,7 +131,7 @@ if (!mag_naar_volgende_ronde($ronde, $team)) {
     $disabled = ' disabled="disabled" ';
 }
 
-if ($ronde <= 5) {
+if ($ronde <= 6) {
 ?>
 <div class="rondeknop">
 <form method="POST"><input type="submit" name="volgenderonde" value="Naar volgende ronde" <?php echo $disabled; ?>>
