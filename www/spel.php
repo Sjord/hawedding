@@ -54,7 +54,7 @@ function is_correctly_answered($question) {
     return true;
 }
 
-if (!empty($_POST["question_hash"])) {
+if (!empty($_POST["question_hash"]) && !empty($_POST["answer_hash"])) {
     // Er is een antwoord opgestuurd.
     $question = R::findOne("question", "hash=?", [$_POST["question_hash"]]);
     $correct = is_correctly_answered($question);
