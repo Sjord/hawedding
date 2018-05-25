@@ -21,7 +21,7 @@ include("../lib/header.php");
             <option>De Partycrashers</option>
         </select>
     </div><div>
-        <input type="submit">
+        <input type="submit" value="Login">
     </div>
 </form>
 <?php
