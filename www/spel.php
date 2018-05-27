@@ -1,5 +1,5 @@
 <?php
-if (empty($_COOKIE)) {
+if (empty($_COOKIE['team'])) {
     header("Location: login.php");
 }
 
@@ -109,8 +109,8 @@ function ronde_genoeg_vragen_beantwoord($ronde, $team) {
 }
 
 function tijd_volgende_ronde($ronde) {
-    // TODO maak dynamisch
-    $next_round_time = strtotime("2018-05-12 11:00:00") + $ronde * 45 * 60;
+    // 45 minuten per ronde. Ronde 1 begint op deze tijd.
+    $next_round_time = strtotime("2018-05-27 15:45:00") + $ronde * 45 * 60;
     return $next_round_time;
 }
 
