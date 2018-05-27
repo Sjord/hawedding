@@ -1,6 +1,7 @@
 <?php
 require("../lib/db.php");
 
+R::wipe("hint");
 $data = file_get_contents("../data/hints.txt");
 $lines = explode("\n", $data);
 foreach ($lines as $line) {

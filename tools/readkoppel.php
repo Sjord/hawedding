@@ -1,6 +1,7 @@
 <?php
 require("../lib/db.php");
 
+R::wipe("koppel");
 $teams = R::find("team");
 $questions = R::find("question");
 $rondes = [1, 2, 3, 4, 5, 6];
