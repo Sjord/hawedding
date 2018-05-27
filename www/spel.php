@@ -110,7 +110,7 @@ function ronde_genoeg_vragen_beantwoord($ronde, $team) {
 
 function tijd_volgende_ronde($ronde) {
     // 45 minuten per ronde. Ronde 1 begint op deze tijd.
-    $next_round_time = strtotime("2018-05-27 15:45:00") + $ronde * 45 * 60;
+    $next_round_time = strtotime("2018-06-01 18:30:00") + $ronde * 45 * 60;
     return $next_round_time;
 }
 
