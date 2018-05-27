@@ -2,7 +2,6 @@
 if (empty($_COOKIE)) {
     header("Location: login.php");
 }
-date_default_timezone_set('Europe/Amsterdam');
 
 require("../lib/db.php");
 
