@@ -3,10 +3,10 @@ require("../lib/db.php");
 
 R::wipe("koppel");
 $teams = R::find("team");
-$questions = R::find("question");
+$questions = array_values(R::find("question"));
 $rondes = [1, 2, 3, 4, 5, 6];
 
-$offset = 1;
+$offset = 0;
 foreach ($teams as $team) {
     foreach ($rondes as $ronde) {
         for ($i = 0; $i < 5; $i++) {
