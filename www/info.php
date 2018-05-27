@@ -6,8 +6,16 @@ require("../lib/header.php");
 <p>
 Op vrijdagavond is er tussen 17:00 en 18:00 uur de mogelijkheid om op scouting te eten. Daarna starten we per team aan het weekend. Als je later bent is dat geen probleem, dan vertrek je met een later team. Vertrek je niet vanuit Haarlem, dan krijg je instructies hoe je op de locatie komt.
 <div>We streven ernaar om tussen 22:00/23:00 te arriveren op locatie.</div>
-<p>De routebeschrijving is een beetje ingewikkeld, dus neem je kaarthoekmeter of geodriehoek mee, en laadt je telefoon op.</p>
+<p>De routebeschrijving is een beetje ingewikkeld, dus neem je lineaal mee, en laadt je telefoon op.</p>
 <div>
+
+<h3>Teams</h3>
+<ul>
+<li>De Schoonfamilie: Sarah, Deborah, Maikel <!-- Richella, Andrea vG, Timon --></li>
+<li>De Rugbyvrienden: Lisa, Niek, Rick, Arjan<!-- Charlotte, Jelle B, Marc, (Vincent) --></li>
+<li>De Bruidsmeisjes: Joris, Maartje, Adrianus, Lieke <!-- Jelte, Janneke, Bas, (Els) --></li>
+<li>De Partycrashers: Kirsten, Marije, Laurens <!-- Maam, Andrea N, Jelle Puts --></li>
+</ul>
 
 <h3>Paklijst</h3>
 <p>Je kan overwegen om de volgende dingen mee te nemen:</p>
