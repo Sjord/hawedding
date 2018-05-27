@@ -1,8 +1,6 @@
 <?php
 require("../lib/db.php");
 
-R::wipe("question");
-R::wipe("answer");
 $questions = file_get_contents("../data/questions.txt");
 foreach (explode("\n", $questions) as $line) {
     if (empty($line)) continue;

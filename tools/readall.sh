@@ -1,7 +1,8 @@
 #!/bin/sh
 
-php -f readhints.php
-php -f readquestions.php
-php -f readteams.php
-php -f readtreinhints.php
-php -f readkoppel.php
+php -d display_errors=On -f nukedb.php
+php -d display_errors=On -f readhints.php
+php -d display_errors=On -f readquestions.php
+php -d display_errors=On -f readteams.php
+php -d display_errors=On -f readtreinhints.php
+php -d display_errors=On -f readkoppel.php
