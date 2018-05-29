@@ -139,7 +139,7 @@ if (!ronde_genoeg_vragen_beantwoord($ronde, $team)) {
     echo "Je kan nog niet naar de volgende ronde omdat je nog niet genoeg vragen hebt beantwoord. ";
 }
 if (!ronde_tijd_is_om($ronde)) {
-    echo "De volgende ronde begint pas om ".strftime("%H:%M", tijd_volgende_ronde($ronde))." uur.";
+    echo "De volgende ronde begint pas vrijdag om ".strftime("%H:%M", tijd_volgende_ronde($ronde))." uur.";
 }
 ?>
 </form>

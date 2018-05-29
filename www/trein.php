@@ -3,19 +3,10 @@
 require("../lib/db.php");
 include("../lib/header.php");
 
-function tijd_volgende_ronde($ronde) {
-    // TODO maak dynamisch
-    $next_round_time = strtotime("2018-05-12 11:00:00") + $ronde * 30 * 60;
-    return $next_round_time;
-}
-
-function ronde_tijd_is_om($ronde) {
-    $next_round_time = tijd_volgende_ronde($ronde);
-    return strtotime("now") >= $next_round_time;
-}
-
-$start_time = strtotime("2018-05-27 16:00:00");
-$ronde = floor((strtotime("now") - $start_time) / (60 * 30));
+// Tijd vanaf dat de eerste hint wordt getoond
+$start_time = strtotime("2018-06-01 18:10:00");
+$ronde = max(floor((strtotime("now") - $start_time) / (60 * 30)), -1);
+$volgende_ronde = $start_time + (($ronde + 1) * 30 * 60);
 
 $hint = R::findOne('treinhint', '`index`=?', [$ronde]);
 ?>
@@ -24,7 +15,12 @@ $hint = R::findOne('treinhint', '`index`=?', [$ronde]);
 </header>
 <p>
 <?php
-echo $hint->text;
+if ($hint) {
+    echo '<p>'.$hint->text.'</p>';
+} else {
+    echo "Er is op dit moment geen hint voor de route per trein. Probeer het later nog eens.";
+}
+echo " De volgende hint is beschikbaar vrijdag om ".strftime("%H:%M", $volgende_ronde)." uur.";
 ?>
 </p>
 
