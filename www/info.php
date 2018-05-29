@@ -11,10 +11,10 @@ Op vrijdagavond is er tussen 17:00 en 18:00 uur de mogelijkheid om op scouting t
 
 <h3>Teams</h3>
 <ul>
-<li>De Schoonfamilie: Sarah, Deborah, Maikel <!-- Richella, Andrea vG, Timon --></li>
-<li>De Rugbyvrienden: Lisa, Niek, Rick, Arjan<!-- Charlotte, Jelle B, Marc, (Vincent) --></li>
-<li>De Bruidsmeisjes: Joris, Maartje, Adrianus, Lieke <!-- Jelte, Janneke, Bas, (Els) --></li>
-<li>De Partycrashers: Kirsten, Marije, Laurens <!-- Maam, Andrea N, Jelle Puts --></li>
+<li>De Schoonfamilie: Sarah, Deborah, Maikel <!-- Richella, Andrea vG, Timon --> - vertrekken vanaf het clubhuis rond 18:00 uur</li>
+<li>De Rugbyvrienden: Lisa, Niek, Rick, Arjan<!-- Charlotte, Jelle B, Marc, (Vincent) --> - 18:00 uur</li>
+<li>De Bruidsmeisjes: Joris, Maartje, Adrianus, Lieke <!-- Jelte, Janneke, Bas, (Els) --> - 18:30 uur</li>
+<li>De Partycrashers: Kirsten, Marije, Laurens <!-- Maam, Andrea N, Jelle Puts --> - 19:00 uur</li>
 </ul>
 
 <h3>Paklijst</h3>
