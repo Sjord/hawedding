@@ -6,6 +6,8 @@ if (!empty($_POST['echtenaam']) && !empty($_POST['bruiloftnaam'])) {
     header("Location: spel.php");
 }
 include("../lib/header.php");
+
+$active = strtotime("now") > strtotime("2018-06-01");
 ?>
 <form method="POST">
     <div>
@@ -21,7 +23,10 @@ include("../lib/header.php");
             <option>De Partycrashers</option>
         </select>
     </div><div>
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" <?php if (!$active) { echo 'disabled="disabled"'; } ?>>
+        <?php
+        if (!$active) { echo "Je kan nog niet inloggen. Probeer het later nog eens."; }
+        ?>
     </div>
 </form>
 <?php
