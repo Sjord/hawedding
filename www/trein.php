@@ -14,9 +14,12 @@ $hint = R::findOne('treinhint', '`index`=?', [$ronde]);
 <h1>Treinteam hints</h1>
 </header>
 <p>
+Op deze pagina staat elk half uur een hint voor het treinteam. Maar pas op, voor je het weet zit je op een dwaalspoor. Haha. Snap je hem? Dwaal-<em>spoor</em>?! En de trein rijdt ook op het spoor. Wat een grap.
+</p>
+<p>
 <?php
 if ($hint) {
-    echo '<p>'.$hint->text.'</p>';
+    echo '<p>Hint: '.$hint->text.'</p>';
 } else {
     echo "Er is op dit moment geen hint voor de route per trein. Probeer het later nog eens.";
 }
