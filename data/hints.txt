@@ -1,0 +1,93 @@
+Ronde 1 (goed):
+Ten zuidwesten van de lijn tussen Uden en Heiloo (597)
+Ten zuidwesten van de lijn tussen Lisse en Heinsberg (396)
+Ten zuidoosten van de lijn tussen Oostvoorne en Heiloo (577)
+Ten zuidoosten van de lijn tussen Katwijk en Bolsward (610)
+Ten zuiden van de lijn tussen Dieren en Katwijk (664)
+Ten westen van de lijn tussen Tienen en Olst (534)
+
+Ronde 1 (fout):
+Ten zuiden van de lijn tussen Noordwijk en Olst (764)
+Ten zuidwesten van de lijn tussen Lunteren en Castricum (847)
+Ten zuidoosten van de lijn tussen Swifterbant en Noordwijk (763)
+Ten westen van de lijn tussen Maaseik en Zwartsluis (832)
+Ten zuidoosten van de lijn tussen Heemskerk en Buitenpost (842)
+Ten zuidwesten van de lijn tussen Heiloo en Putten (993)
+
+Ronde 2 (goed):
+Ten noordwesten van de lijn tussen Appelscha en Lier (188)
+Ten zuidwesten van de lijn tussen Vaals en Bree (195)
+Ten zuidoosten van de lijn tussen Swifterbant en Steenbergen (216)
+Ten noordoosten van de lijn tussen Steenbergen en Tongeren (242)
+Ten zuiden van de lijn tussen Hoek van Holland en Rhenen (436)
+Ten westen van de lijn tussen Biddinghuizen en Zaltbommel (262)
+
+Ronde 2 (fout):
+Ten noordwesten van de lijn tussen Dendermonde en Waregem (489)
+Ten zuidoosten van de lijn tussen Frederiksoord en Burgh-Haamstede (527)
+Ten westen van de lijn tussen Son en Breugel en Tienen (542)
+Ten zuidwesten van de lijn tussen Den Helder en Maaseik (542)
+Ten westen van de lijn tussen Bolsward en Tongeren (553)
+Ten noordoosten van de lijn tussen Domburg en Lier (532)
+
+Ronde 3 (goed):
+Ten noordoosten van de lijn tussen Oostvoorne en Bree (11)
+Ten noordoosten van de lijn tussen Baarle-Nassau en Vaals (30)
+Ten westen van de lijn tussen Heiloo en Aarschot (43)
+Ten zuidwesten van de lijn tussen Hoek van Holland en Gilze (49)
+Ten zuiden van de lijn tussen Domburg en Zevenbergen (54)
+Ten oosten van de lijn tussen Zundert en Lisse (55)
+
+Ronde 3 (fout):
+Ten zuidoosten van de lijn tussen Biddinghuizen en Waregem (146)
+Ten westen van de lijn tussen Mijdrecht en Dongen (158)
+Ten zuidoosten van de lijn tussen Waregem en Frederiksoord (168)
+Ten noordwesten van de lijn tussen Rhenen en Gilze (172)
+Ten noordwesten van de lijn tussen Loon op Zand en Sint-Katherina-Lombeek (189)
+Ten zuidoosten van de lijn tussen Waregem en Swifterbant (206)
+
+Ronde 4 (goed):
+Ten zuidoosten van de lijn tussen Lier en Gilze (191)
+Ten noordwesten van de lijn tussen Valkenswaard en Tienen (218)
+Ten noordwesten van de lijn tussen Loenen en Uden (221)
+Ten zuiden van de lijn tussen Neerpelt en Dendermonde (238)
+Ten zuiden van de lijn tussen Dendermonde en Neerpelt (238)
+Ten zuidoosten van de lijn tussen Baarle-Nassau en Sint-Katherina-Lombeek (277)
+
+Ronde 4 (fout):
+Ten westen van de lijn tussen Olst en Neerpelt (396)
+Ten zuidwesten van de lijn tussen Katwijk en Baarle-Nassau (421)
+Ten zuiden van de lijn tussen Domburg en Bree (468)
+Ten oosten van de lijn tussen Den Helder en Aalst (473)
+Ten oosten van de lijn tussen Schagen en Lisse (474)
+Ten zuidwesten van de lijn tussen Steenbergen en Vaals (475)
+
+Ronde 5 (goed):
+Ten westen van de lijn tussen Herentals en Dokkum (15)
+Ten zuidwesten van de lijn tussen Oostvoorne en Lier (22)
+Ten westen van de lijn tussen Hillegom en Zundert (28)
+Ten noorden van de lijn tussen Tongeren en Aalst (44)
+Ten zuiden van de lijn tussen Bree en Sint-Katherina-Lombeek (59)
+Ten oosten van de lijn tussen Strijen en Lier (68)
+
+Ronde 5 (fout):
+Ten westen van de lijn tussen Baarle-Nassau en Heemskerk (285)
+Ten oosten van de lijn tussen Buitenpost en Zundert (297)
+Ten zuidoosten van de lijn tussen Loon op Zand en Sint-Katherina-Lombeek (297)
+Ten zuiden van de lijn tussen Valkenswaard en Arcen (336)
+Ten zuiden van de lijn tussen Heinsberg en Axel (338)
+Ten oosten van de lijn tussen Den Helder en Lisse (340)
+
+Ronde 6 (goed):
+In de buurt "Molenveld"
+Ten noordoosten van de Rijweg
+Ten zuiden van het spoor
+Ten westen van de Mechelsesteenweg
+Ten westen van de Leo Meulenmansstraat
+
+Ronde 6 (fout):
+In Herent
+Ten noordoosten van de Rijweg
+Ten zuiden van de Winkelsesteenweg en de Wilselsesteenweg
+Ten westen van de N26
+Ten noorden van de N2

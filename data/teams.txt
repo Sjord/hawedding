@@ -1,0 +1,4 @@
+team 1800a “De Schoonfamilie”: Richella, Andrea vG, Timon
+team 1800b “De Rugbyvrienden”: Charlotte, Janneke, Marc, (Vincent)
+team 1830 “De Bruidsmeisjes”: Jelte, Janneke, Bas, (Els)
+team 1900 “De Partycrashers”: Maam, Andrea N, Jelle Puts
